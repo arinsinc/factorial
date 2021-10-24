@@ -1,0 +1,15 @@
+user-account
+    default
+        user-application.yml
+    dev
+        development.yml
+    prod
+        user-application.yml
+
+transaction
+    default
+        transaction-application.yml
+    dev
+        development.yml
+    prod
+        transaction-application.yml
