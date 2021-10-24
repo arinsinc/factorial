@@ -1,4 +1,4 @@
-package com.factorial.user.service;
+package com.factorial.transaction.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,13 +8,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.concurrent.ListenableFuture;
 import org.springframework.util.concurrent.ListenableFutureCallback;
 
-
 @Service
 public class ProducerService {
     private static final Logger logger = LoggerFactory.getLogger(ProducerService.class);
 
     private final KafkaTemplate<String, String> kafkaTemplate;
-    private final String TOPIC = "CREATE_USER";
+    private final String TOPIC = "TRANSACTION_DONE";
 
     public ProducerService(KafkaTemplate<String, String> kafkaTemplate) {
         this.kafkaTemplate = kafkaTemplate;
