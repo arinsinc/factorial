@@ -1,0 +1,26 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: account-service
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        ddl-auto: none
+        show-sql: true
+        default_schema: public
+  datasource:
+    url: jdbc:postgresql://localhost:5432/factorial_development
+    username: postgres
+    password: admin
+    initialization-mode: always
+    initialize: true
+    continue-on-error: true
+  security:
+    basic:
+      enabled: false
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER:http://localhost:8761/eureka}
