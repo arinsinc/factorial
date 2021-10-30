@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.factorial</groupId>
 	<artifactId>discovery-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0-SNAPSHOT</version>
 	<name>discovery-service</name>
 	<description>Eureka service registry</description>
 	<properties>

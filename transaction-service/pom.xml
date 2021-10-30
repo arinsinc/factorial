@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.factorial</groupId>
 	<artifactId>transaction-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0-SNAPSHOT</version>
 	<name>transaction-service</name>
 	<description>Payment processing service</description>
 	<properties>

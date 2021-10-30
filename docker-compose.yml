@@ -1,0 +1,63 @@
+version: "3.8"
+
+services:
+  account-service:
+    image: account-service:latest
+    container_name: account-service
+    build:
+      context: ./account-service
+      args:
+        - APP_NAME=account-service
+        - APP_VERSION=1.0
+    expose:
+      - 8081
+    ports:
+      - "8081:8081"
+  config-service:
+    image: config-service:latest
+    container_name: config-service
+    build:
+      context: ./config-service
+      args:
+        - APP_NAME=config-service
+        - APP_VERSION=1.0
+    expose:
+      - 8888
+    ports:
+      - "8888:8888"
+  discovery-service:
+    image: discovery-service:latest
+    container_name: discovery-service
+    build:
+      context: ./discovery-service
+      args:
+        - APP_NAME=discovery-service
+        - APP_VERSION=1.0
+    expose:
+      - 8761
+    ports:
+      - "8761:8761"
+  gateway-service:
+    image: gateway-service:latest
+    container_name: gateway-service
+    build:
+      context: ./gateway-service
+      args:
+        - APP_NAME=gateway-service
+        - APP_VERSION=1.0
+    expose:
+      - 8765
+    ports:
+      - "8765:8765"
+  transaction-service:
+    image: transaction-service:latest
+    container_name: transaction-service
+    build:
+      context: ./transaction-service
+      args:
+        - APP_NAME=transaction-service
+        - APP_VERSION=1.0
+    expose:
+      - 8082
+    ports:
+      - "8082:8082"
